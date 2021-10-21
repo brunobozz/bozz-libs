@@ -1,0 +1,31 @@
+.bozz-calendar {
+  &-title {
+    text-align: center;
+  }
+  &-week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% / 7);
+      height: 30px;
+      font-weight: bold;
+    }
+  }
+  &-days {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% / 7);
+      height: 30px;
+      border: 1px solid #fff;
+    }
+  }
+}

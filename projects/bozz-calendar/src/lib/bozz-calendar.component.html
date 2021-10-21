@@ -1,0 +1,33 @@
+<div class="bozz-calendar">
+  <div class="d-flex justify-content-between align-items-center">
+    <button class="btn btn-sm" (click)="changePrevMonth()">
+      <span class="fa-stack">
+        <i class="fa fa-chevron-left"></i>
+      </span>
+    </button>
+    <div class="bozz-calendar-title fs-5">{{ year }} - {{ months[month] }}</div>
+    <button class="btn btn-sm" (click)="changeNextMonth()">
+      <span class="fa-stack">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </button>
+  </div>
+
+  <div class="bozz-calendar-week">
+    <span *ngFor="let weekDay of week">{{ weekDay }}</span>
+  </div>
+  <div class="bozz-calendar-days">
+    <span
+      *ngFor="let day of daysMonth"
+      [title]="day.status"
+      [ngClass]="
+        todayDay === day.number && todayMonth === month && todayYear === year
+          ? 'border-primary text-primary'
+          : 'bg-d'
+      "
+      [ngStyle]="{ 'background-color': day.bg, color: day.color }"
+    >
+      {{ day.number }}
+    </span>
+  </div>
+</div>
