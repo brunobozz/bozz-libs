@@ -20,12 +20,22 @@
     <span
       *ngFor="let day of daysMonth"
       [title]="day.status"
-      [ngClass]="
-        todayDay === day.number && todayMonth === month && todayYear === year
-          ? 'border-primary text-primary'
-          : 'bg-d'
-      "
       [ngStyle]="{ 'background-color': day.bg, color: day.color }"
+      [style.border-color]="
+        todayDay === day.number && todayMonth === month && todayYear === year
+          ? colors.todayBdColor
+          : 'none'
+      "
+      [style.color]="
+        todayDay === day.number && todayMonth === month && todayYear === year
+          ? colors.todayTxColor
+          : 'none'
+      "
+      [style.font-weight]="
+        todayDay === day.number && todayMonth === month && todayYear === year
+          ? 'bold'
+          : 'normal'
+      "
     >
       {{ day.number }}
     </span>

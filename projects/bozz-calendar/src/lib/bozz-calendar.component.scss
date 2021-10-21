@@ -24,8 +24,33 @@
       justify-content: center;
       align-items: center;
       width: calc(100% / 7);
-      height: 30px;
-      border: 1px solid #fff;
+      height: 80px;
+      font-size: 2rem;
+      border: 3px solid #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bozz-calendar {
+    &-days {
+      span {
+        height: 50px;
+        font-size: 1rem;
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bozz-calendar {
+    &-days {
+      span {
+        height: 30px;
+        font-size: 1rem;
+        border: 1px solid #ffffff;
+      }
     }
   }
 }

@@ -8,6 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bozz-libs';
 
+  public colors: any = {
+    daysMonthBgColor: '#f1f6cd',
+    daysMonthTxColor: '#50524a',
+    noDaysMonthBgColor: '#ffffff',
+    noDaysMonthTxColor: '#cccccc',
+    todayTxColor: '#66873c',
+    todayBdColor: '#44672c',
+  };
+
   public months: any = [
     'Janeiro',
     'Fevereiro',
@@ -29,26 +38,26 @@ export class AppComponent {
     {
       date: new Date(2021, 9, 26),
       status: 'Indisponível',
-      bg: '#ff4444',
-      color: '#ffffff',
+      bg: '#ff9e29',
+      color: '#50524a',
     },
     {
       date: new Date(2021, 9, 22),
       status: 'Indisponível',
-      bg: '#ff4444',
-      color: '#ffffff',
+      bg: '#ff9e29',
+      color: '#50524a',
     },
     {
       date: new Date(2021, 9, 21),
       status: 'Indisponível',
-      bg: '#ff4444',
-      color: '#ffffff',
+      bg: '#ff9e29',
+      color: '#50524a',
     },
     {
       date: new Date(2021, 9, 25),
       status: 'Indisponível',
-      bg: '#ff4444',
-      color: '#ffffff',
+      bg: '#ff9e29',
+      color: '#50524a',
     },
     {
       date: new Date(2021, 11, 25),

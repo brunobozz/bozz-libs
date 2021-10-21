@@ -6,6 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./bozz-calendar.component.scss'],
 })
 export class BozzCalendarComponent implements OnInit {
+  @Input() colors?: any = {
+    daysMonthBgColor: '#f6f6f6',
+    daysMonthTxColor: '#212529',
+    noDaysMonthBgColor: '#ffffff',
+    noDaysMonthTxColor: '#cccccc',
+    todayTxColor: '#000000',
+    todayBdColor: '#000000',
+  };
+
   @Input() months?: any = [
     'January',
     'February',
@@ -43,13 +52,16 @@ export class BozzCalendarComponent implements OnInit {
     let dateLast = new Date(this.year, this.month + 1, 0);
     let days = [];
     //cria dias mes anterior
+    let datePrev =
+      new Date(this.year, this.month, 0).getDate() - date.getDay() + 1;
     for (let i = date.getDay(); i > 0; i--) {
       days.push({
-        number: null,
+        number: datePrev,
         status: null,
-        bg: null,
-        color: null,
+        bg: this.colors.noDaysMonthBgColor,
+        color: this.colors.noDaysMonthTxColor,
       });
+      datePrev = datePrev + 1;
     }
     //cria dias mes atual
     while (date.getMonth() === this.month) {
@@ -79,20 +91,23 @@ export class BozzCalendarComponent implements OnInit {
         days.push({
           number: date.getDate(),
           status: null,
-          bg: null,
-          color: null,
+          bg: this.colors.daysMonthBgColor,
+          color: this.colors.daysMonthTxColor,
         });
       }
 
       date.setDate(date.getDate() + 1);
     }
     //cria dias mes posterior
+    let dataNext = 1;
     for (let i = dateLast.getDay(); i < 6; i++) {
       days.push({
-        number: null,
+        number: dataNext,
         status: null,
-        color: null,
+        bg: this.colors.noDaysMonthBgColor,
+        color: this.colors.noDaysMonthTxColor,
       });
+      dataNext = dataNext + 1;
     }
     this.daysMonth = days;
   }
