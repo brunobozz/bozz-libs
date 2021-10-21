@@ -149,3 +149,19 @@ And your beautiful calendar will look like this:
 <p>
     <img src="./imgs/bozzcalendarColors.png">
 </p>
+
+## &nbsp;
+
+## GITHUB
+
+<p>
+    Project to my personal libs: <a href="https://github.com/brunobozz/bozz-libs" taget="_blank">bozz-libs</a>
+</p>
+
+## &nbsp;
+
+## CONTACT
+
+Bruno Bozzetti
+instagram.com/@brunobozz
+brunobozz@gmail.com
