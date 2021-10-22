@@ -4,11 +4,7 @@ It is a simple library to display a calendar with status of days using an array 
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## &nbsp;
-
-## Latest version is 0.1.0
-
-## &nbsp;
+&nbsp;
 
 ## How to install
 
@@ -18,7 +14,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 npm i bozz-calendar
 ```
 
-2 - Add `BozzCalendarModule` on the `imports:` in your `app.module` like this:
+2 - Add `BozzCalendarModule` on the `imports:[]` in your `app.module` like this:
 
 ```
 @NgModule({
@@ -39,15 +35,15 @@ npm i bozz-calendar
 <lib-bozz-calendar></lib-bozz-calendar>
 ```
 
-## &nbsp;
+&nbsp;
 
 ## The Default Calendar
 
 <p>
-    <img src="./imgs/bozzcalendarDefault.png">
+    <img src="https://github.com/brunobozz/bozz-libs/blob/main/projects/bozz-calendar/imgs/bozzcalendarDefault.png?raw=true">
 </p>
 
-## &nbsp;
+&nbsp;
 
 ## How send status from the days?
 
@@ -79,17 +75,17 @@ public dates = [
 And you will see the calendar with status an hint on the selected days:
 
 <p>
-    <img src="./imgs/bozzcalendarStatus.png">
+    <img src="https://github.com/brunobozz/bozz-libs/blob/main/projects/bozz-calendar/imgs/bozzcalendarStatus.png?raw=true">
 </p>
 
-## &nbsp;
+&nbsp;
 
 ## Can I translate the calendar?
 
 1 - Yes! In your `.ts` file you can create an array for the `months` and another for de `week` like this:
 
 ```
-public monthsPT-BR: any = [
+public monthsPTBR: any = [
     'Janeiro',
     'Fevereiro',
     'Março',
@@ -104,22 +100,22 @@ public monthsPT-BR: any = [
     'Dezembro',
 ];
 
-public weekPT-BR = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+public weekPTBR = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 ```
 
 2 - Send to lib in the `HTML` file like this:
 
 ```
-<lib-bozz-calendar [months]="monthsPT-BR" [week]="weekPT-BR"></lib-bozz-calendar>
+<lib-bozz-calendar [months]="monthsPTBR" [week]="weekPTBR"></lib-bozz-calendar>
 ```
 
 And now your calendar will apears translated:
 
 <p>
-    <img src="./imgs/bozzcalendarTranslate.png">
+    <img src="https://github.com/brunobozz/bozz-libs/blob/main/projects/bozz-calendar/imgs/bozzcalendarTranslate.png?raw=true">
 </p>
 
-## &nbsp;
+&nbsp;
 
 ## And the other colors "bro"?
 
@@ -147,10 +143,10 @@ public colors: any = {
 And your beautiful calendar will look like this:
 
 <p>
-    <img src="./imgs/bozzcalendarColors.png">
+    <img src="https://github.com/brunobozz/bozz-libs/blob/main/projects/bozz-calendar/imgs/bozzcalendarColors.png?raw=true">
 </p>
 
-## &nbsp;
+&nbsp;
 
 ## GITHUB
 
@@ -158,10 +154,12 @@ And your beautiful calendar will look like this:
     Project to my personal libs: <a href="https://github.com/brunobozz/bozz-libs" taget="_blank">bozz-libs</a>
 </p>
 
-## &nbsp;
+&nbsp;
 
 ## CONTACT
 
 Bruno Bozzetti
+
 instagram.com/@brunobozz
+
 brunobozz@gmail.com
